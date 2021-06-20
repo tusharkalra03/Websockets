@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D3711305267CCFAF00E89173 /* WebsocketLauncher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3711303267CCFAB00E89173 /* WebsocketLauncher.framework */; };
-		D3711306267CCFAF00E89173 /* WebsocketLauncher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3711303267CCFAB00E89173 /* WebsocketLauncher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D3421816267F230A0089DC7D /* WebsocketLauncher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3421814267F23040089DC7D /* WebsocketLauncher.framework */; };
+		D3421817267F230A0089DC7D /* WebsocketLauncher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3421814267F23040089DC7D /* WebsocketLauncher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D395D3BB267A30A30042FAC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D395D3BA267A30A30042FAC3 /* AppDelegate.swift */; };
 		D395D3BD267A30A30042FAC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D395D3BC267A30A30042FAC3 /* SceneDelegate.swift */; };
 		D395D3BF267A30A30042FAC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D395D3BE267A30A30042FAC3 /* ViewController.swift */; };
@@ -25,7 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D3711306267CCFAF00E89173 /* WebsocketLauncher.framework in Embed Frameworks */,
+				D3421817267F230A0089DC7D /* WebsocketLauncher.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,7 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D3711303267CCFAB00E89173 /* WebsocketLauncher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebsocketLauncher.framework; sourceTree = "<group>"; };
+		D3421814267F23040089DC7D /* WebsocketLauncher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebsocketLauncher.framework; sourceTree = "<group>"; };
 		D395D3B7267A30A30042FAC3 /* WebsocketApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebsocketApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D395D3BA267A30A30042FAC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D395D3BC267A30A30042FAC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3711305267CCFAF00E89173 /* WebsocketLauncher.framework in Frameworks */,
+				D3421816267F230A0089DC7D /* WebsocketLauncher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +76,7 @@
 		D395D3B9267A30A30042FAC3 /* WebsocketApp */ = {
 			isa = PBXGroup;
 			children = (
-				D3711303267CCFAB00E89173 /* WebsocketLauncher.framework */,
+				D3421814267F23040089DC7D /* WebsocketLauncher.framework */,
 				D395D3BA267A30A30042FAC3 /* AppDelegate.swift */,
 				D395D3BC267A30A30042FAC3 /* SceneDelegate.swift */,
 				D395D3BE267A30A30042FAC3 /* ViewController.swift */,

@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/WebsocketLauncher.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		SpvTXPD1wa/pT8P7oMz05CxIrvc=
+		OawhfaRM4OGC1eksNeCdNPFRG8Y=
 		</data>
 		<key>Modules/WebsocketLauncher.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<data>
-		SpvTXPD1wa/pT8P7oMz05CxIrvc=
+		OawhfaRM4OGC1eksNeCdNPFRG8Y=
 		</data>
 		<key>Modules/WebsocketLauncher.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/WebsocketLauncher.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		U0vNMD8XLngN42/359Ymqon8Ne8=
+		5MZrAKEIdqWW0jb1KNegVh2IW+c=
 		</data>
 		<key>Modules/WebsocketLauncher.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/WebsocketLauncher.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		U0vNMD8XLngN42/359Ymqon8Ne8=
+		5MZrAKEIdqWW0jb1KNegVh2IW+c=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -65,14 +65,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ya2ZBs+RWPKUZH/LqA8XMU6v0YN4Xhh59m87NDXv9hY=
+			0ANQCO83tTOwMZxIojNiIPrpAnSGSnamDkgW/2yh494=
 			</data>
 		</dict>
 		<key>Modules/WebsocketLauncher.swiftmodule/Project/x86_64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ya2ZBs+RWPKUZH/LqA8XMU6v0YN4Xhh59m87NDXv9hY=
+			0ANQCO83tTOwMZxIojNiIPrpAnSGSnamDkgW/2yh494=
 			</data>
 		</dict>
 		<key>Modules/WebsocketLauncher.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -86,7 +86,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nXQ3SYSh8l+ZLebyLToztif0ZmmWUlOH4yQXf6P5wus=
+			hCMG0HY77f0nK1IzfmcNksyoZQhQHXQwBCmOhABmgo0=
 			</data>
 		</dict>
 		<key>Modules/WebsocketLauncher.swiftmodule/x86_64.swiftdoc</key>
@@ -100,7 +100,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nXQ3SYSh8l+ZLebyLToztif0ZmmWUlOH4yQXf6P5wus=
+			hCMG0HY77f0nK1IzfmcNksyoZQhQHXQwBCmOhABmgo0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

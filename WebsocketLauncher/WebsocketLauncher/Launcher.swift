@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public class Launcher: NSObject, URLSessionWebSocketDelegate {
+public class Launcher: NSObject, URLSessionWebSocketDelegate{
     
     public override init(){
     }
@@ -33,7 +33,7 @@ public class Launcher: NSObject, URLSessionWebSocketDelegate {
         let message = URLSessionWebSocketTask.Message.string(message)
         websocketTask.send(message) { error in
             
-            guard error == nil else {completion(.failure(error!))
+            guard error == nil else { completion(.failure(error!))
                 return
             }
             print("Sending")
@@ -76,5 +76,18 @@ public class Launcher: NSObject, URLSessionWebSocketDelegate {
         websocketTask.cancel(with: .goingAway, reason: nil)
     }
     
+    func onSuccess(message: String){
+        print(message)
+        
+    }
     
+    
+}
+
+
+public protocol CompletionProtocol {
+    
+    func onSuccess(message: String)
+    
+    func onError(error: Error)
 }

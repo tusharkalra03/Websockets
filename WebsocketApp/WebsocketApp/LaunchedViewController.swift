@@ -13,7 +13,6 @@ class LaunchedViewController: UIViewController {
     var launcher: Launcher!
     
     
-    
     private let textlabel: UILabel = {
         let textlabel = UILabel()
         textlabel.text = "Send message"
@@ -77,7 +76,7 @@ class LaunchedViewController: UIViewController {
         textlabel.frame = CGRect(x: view.left + 16, y: view.top + 100, width: size - 32, height: 100)
         textField.frame = CGRect(x: view.left + 16, y: textlabel.bottom + 20, width: size - 32, height: 50)
         button.frame = CGRect(x: view.left + 16, y: textField.bottom + 20, width: size - 32, height: 50)
-        cancelButton.frame = CGRect(x: view.left + 16, y: button.bottom + 20, width: size - 32, height: 50)
+        cancelButton.frame = CGRect(x: view.left + 16, y: button.bottom + 8, width: size - 32, height: 50)
         
     }
     
@@ -89,38 +88,30 @@ class LaunchedViewController: UIViewController {
             
             DispatchQueue.main.async {
                 
-    
-            switch output{
-            
-            case .failure(let error):
-                let alert = UIAlertController(title: "Error sending", message: error.localizedDescription, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default))
-                self.present(alert, animated: true)
+                switch output{
                 
-            case .success(_):
-                
-                self.launcher.recieveMessage(){ output in
+                case .failure(let error):
+                    self.onError(error: error )
+
+                case .success(_):
                     
-                    
-                    DispatchQueue.main.async {
-                        
-                        switch output{
-                        case .success(let string):
-                            let alert = UIAlertController(title: "Message Recieved", message: string, preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "OK", style: .default))
-                            self.present(alert, animated: true)
+                    self.launcher.recieveMessage(){ output in
+           
+                        DispatchQueue.main.async {
                             
-                        case .failure(let error):
-                            let alert = UIAlertController(title: "Error recieving", message: error.localizedDescription, preferredStyle: .alert)
-                            alert.addAction(UIAlertAction(title: "OK", style: .default))
-                            self.present(alert, animated: true)
-                            
+                            switch output{
+                            case .success(let string):
+                                self.onSuccess(message: string)
+
+                            case .failure(let error):
+                                self.onError(error: error)
+                                
+                            }
                         }
                     }
                 }
+                
             }
-            
-        }
             
         }
     }
@@ -128,23 +119,40 @@ class LaunchedViewController: UIViewController {
     
     
     @objc func disconnect(){
-            launcher.disconnect()
-            self.dismiss(animated: true)
-        }
-        
-        
+        launcher.disconnect()
+        self.dismiss(animated: true)
     }
     
     
-    extension UITextField {
-        func setLeftPaddingPoints(_ amount:CGFloat){
-            let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
-            self.leftView = paddingView
-            self.leftViewMode = .always
-        }
-        func setRightPaddingPoints(_ amount:CGFloat) {
-            let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
-            self.rightView = paddingView
-            self.rightViewMode = .always
-        }
+}
+
+
+extension LaunchedViewController: CompletionProtocol {
+    
+    func onSuccess(message: String) {
+        let alert = UIAlertController(title: "Message Recieved", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true)
     }
+    
+    func onError(error: Error) {
+        let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alert, animated: true)
+    }
+    
+    
+}
+
+extension UITextField {
+    func setLeftPaddingPoints(_ amount:CGFloat){
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
+        self.leftView = paddingView
+        self.leftViewMode = .always
+    }
+    func setRightPaddingPoints(_ amount:CGFloat) {
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
+        self.rightView = paddingView
+        self.rightViewMode = .always
+    }
+}
